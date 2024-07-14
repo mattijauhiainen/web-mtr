@@ -1,1 +1,68 @@
-<div>Github Pages</div>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="/src/styles.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MTR</title>
+        <script type="module" src="/src/main.ts" defer></script>
+        <style>
+            html,
+            body,
+            #canvas-container {
+                margin: 0;
+                width: 100vw;
+                height: 100vh;
+                overflow: hidden;
+                display: grid;
+                place-content: center;
+            }
+            #canvas {
+                margin: 0;
+                padding: 0;
+                width: 2000px;
+                height: 1172px;
+            }
+            #processing-canvas {
+                margin: 0;
+                padding: 0;
+                left: 0;
+                top: 0;
+                width: 2000px;
+                height: 1172px;
+                position: absolute;
+                visibility: hidden;
+            }
+            #clock {
+                position: absolute;
+                top: 8px;
+                left: 8px;
+                font-size: 24px;
+            }
+            #frame {
+                position: absolute;
+                top: 88px;
+                left: 8px;
+                font-size: 24px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <img
+            id="bg-image"
+            src="src/assets/system_map_bw2.png"
+            style="position: absolute; left: -10000px"
+        />
+        <img
+            id="line-source"
+            src="src/assets/system_map_20.png"
+            style="position: absolute; left: -10000px"
+        />
+        <div id="canvas-container">
+            <canvas id="canvas"></canvas>
+        </div>
+        <canvas id="processing-canvas"></canvas>
+        <div id="clock"></div>
+    </body>
+</html>
