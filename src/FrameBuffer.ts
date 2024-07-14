@@ -18,7 +18,9 @@ export class FrameBuffer {
   worker: Worker;
 
   constructor() {
-    this.worker = new Worker("/src/worker.ts", { type: "module" });
+    this.worker = new Worker(new URL("./worker", import.meta.url), {
+      type: "module",
+    });
   }
 
   init({
@@ -38,7 +40,7 @@ export class FrameBuffer {
         animationLayerImageData,
         width,
         height,
-      })
+      }),
     );
 
     this.worker.addEventListener("message", (event) => {

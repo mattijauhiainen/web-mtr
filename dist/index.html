@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MTR</title>
+        <style>
+            html,
+            body,
+            #canvas-container {
+                margin: 0;
+                width: 100vw;
+                height: 100vh;
+                overflow: hidden;
+                display: grid;
+                place-content: center;
+            }
+            #canvas {
+                margin: 0;
+                padding: 0;
+                width: 2000px;
+                height: 1172px;
+            }
+            #processing-canvas {
+                margin: 0;
+                padding: 0;
+                left: 0;
+                top: 0;
+                width: 2000px;
+                height: 1172px;
+                position: absolute;
+                visibility: hidden;
+            }
+            #clock {
+                position: absolute;
+                top: 8px;
+                left: 8px;
+                font-size: 24px;
+            }
+            #frame {
+                position: absolute;
+                top: 88px;
+                left: 8px;
+                font-size: 24px;
+            }
+        </style>
+      <script type="module" crossorigin src="/assets/index-Yma9L0Aa.js"></script>
+    </head>
+
+    <body>
+        <img
+            id="bg-image"
+            src="/assets/system_map_bw2-CUWfBKEP.png"
+            style="position: absolute; left: -10000px"
+        />
+        <img
+            id="line-source"
+            src="/assets/system_map_20-B_-OPbgt.png"
+            style="position: absolute; left: -10000px"
+        />
+        <div id="canvas-container">
+            <canvas id="canvas"></canvas>
+        </div>
+        <canvas id="processing-canvas"></canvas>
+        <div id="clock"></div>
+    </body>
+</html>
